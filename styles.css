@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap");
+:root {
+    --bg-img-width: calc(100vh / 16 * 12);
+    --whitish: #f5f5f5;
+    --right-pane-margin-left: 100px;
+}
+
+body {
+    font-family: "Tilt Neon", cursive, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+.page-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.left-pane {
+    height: 100vh;
+    width: var(--bg-img-width);
+}
+
+.left-pane > img {
+    position: absolute;
+    z-index: -10;
+    height: 100%;
+    width: var(--bg-img-width);
+    opacity: 0.9;
+}
+
+.logo-section {
+    font-family: "Rock Salt", cursive, sans-serif;
+    margin-top: 25%;
+    width: var(--bg-img-width);
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.1);
+    gap: 5%;
+}
+
+.logo-section > img {
+    display: inline-block;
+    aspect-ratio: 16 9;
+    height: 95%;
+    mix-blend-mode: multiply;
+}
+
+.logo-section > h1 {
+    font-size: 32px;
+}
+
+.right-pane {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: calc(100vw - var(--bg-img-width));
+    background-color: var(--whitish);
+}
+
+.middle {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.right-pane > * {
+    width: calc(100% - var(--right-pane-margin-left));
+}
+.right-pane > .middle {
+    width: 100%;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 200px;
+}
+
+.row,
+.middle > legend,
+.top,
+.bottom {
+    margin-left: var(--right-pane-margin-left);
+}
+
+.top,
+.bottom,
+.middle {
+    height: calc(100vh / 3);
+}
+
+.middle > legend {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.top > h2 {
+    margin-bottom: 100px;
+}
+
+.bottom > .button-group {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    align-items: flex-start;
+    font-size: 20px;
+}
+.button-group > button:first-child {
+    font-family: inherit;
+    font-size: 1.5rem;
+    padding: 8px 16px;
+    text-align: center;
+    padding: 16px 24px;
+    background-color: #579bb1;
+    color: white;
+    width: 250px;
+    border-radius: 12px;
+    border: none;
+}
+
+.input > input {
+    width: 300px;
+    height: 30px;
+    border-radius: 4px;
+    border: 2px solid #d8d8d8;
+}
+
+.input > input:focus:invalid {
+    border: 2px solid #b92326;
+}
+
+.input > input:valid {
+    border: 2px solid #28a745;
+}
+.input > input:focus {
+    box-shadow: none;
+    outline: none !important;
+}
+.button-group > button:first-child:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+        0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.button-group > button:first-child:active {
+    transform: translateY(4px);
+    filter: brightness(85%);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
